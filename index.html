@@ -1328,7 +1328,7 @@
   ================================================ -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">
+      <a href="/" class="nav-logo">
         <div class="logo-placeholder">
           <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="2" width="16" height="16" rx="1" stroke="#C9A84C" stroke-width="1"/>
@@ -1645,10 +1645,6 @@
           Коллекция <em>изделий</em>
         </h2>
       </div>
-      <a href="#" class="catalog-link">
-        Весь каталог
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
     </div>
 
     <div class="catalog-filters reveal">
@@ -2063,7 +2059,7 @@
             </div>
             <div class="contact-detail-text">
               <strong>Email</strong>
-              <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="71181f171e311303101f155f0304">[email&#160;protected]</a>
+              <a href="mailto:uralkarkas.perm@yandex.ru" style="color: var(--stone); transition: color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--stone)'">uralkarkas.perm@yandex.ru</a>
             </div>
           </div>
           <div class="contact-detail">
@@ -2166,21 +2162,21 @@
         <div>
           <div class="footer-col-title">Каталог</div>
           <ul class="footer-links">
-            <li><a href="#">Кресла</a></li>
-            <li><a href="#">Диваны</a></li>
-            <li><a href="#">Столы</a></li>
-            <li><a href="#">Уличная мебель</a></li>
-            <li><a href="#">Индивидуальный заказ</a></li>
+            <li><a href="#catalog">Кресла</a></li>
+            <li><a href="#catalog">Диваны</a></li>
+            <li><a href="#catalog">Столы</a></li>
+            <li><a href="#catalog">Уличная мебель</a></li>
+            <li><a href="#contact">Индивидуальный заказ</a></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-col-title">Компания</div>
           <ul class="footer-links">
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Производство</a></li>
-            <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">Гарантия</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#process">Производство</a></li>
+            <li><a href="#faq">Доставка и оплата</a></li>
+            <li><a href="#faq">Гарантия</a></li>
           </ul>
         </div>
 
@@ -2188,7 +2184,7 @@
           <div class="footer-col-title">Контакты</div>
           <ul class="footer-links">
             <li><a href="https://vk.ru/karkaspermrotang" target="_blank" rel="noopener">ВКонтакте</a></li>
-            <li><a href="#">Написать нам</a></li>
+            <li><a href="#" onclick="showEmail(); return false;">Написать нам</a></li>
             <li><a href="#contact">Оставить заявку</a></li>
           </ul>
         </div>
@@ -2197,7 +2193,7 @@
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 <span>Урал-каркас</span>. Все права защищены.</p>
         <div class="footer-legal">
-          <a href="#">Политика конфиденциальности</a>
+          <a href="#" onclick="openPrivacy(); return false;">Политика конфиденциальности</a>
         </div>
       </div>
     </div>
@@ -2488,6 +2484,291 @@
         }
       });
     })();
+  </script>
+
+  <!-- ================================================
+       ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ — МОДАЛЬНОЕ ОКНО
+  ================================================ -->
+  <div class="privacy-overlay" id="privacyOverlay" onclick="closePrivacy()"></div>
+  <div class="privacy-modal" id="privacyModal">
+    <button class="privacy-close" onclick="closePrivacy()">✕</button>
+    <div class="privacy-content">
+      <h2 style="font-family:var(--font-display);font-size:28px;font-weight:300;color:var(--cream);margin-bottom:1.5rem">Политика конфиденциальности</h2>
+
+      <p style="color:var(--stone);font-size:13px;margin-bottom:1rem">Дата последнего обновления: 01.04.2026</p>
+
+      <h3>1. Общие положения</h3>
+      <p>Настоящая политика конфиденциальности разработана в соответствии с требованиями Федерального закона от 27.07.2006 №152-ФЗ «О персональных данных». Оператором персональных данных является самозанятый гражданин <strong>Пинягина Любовь Сергеевна</strong>, сайт <strong>ural-karkas.ru</strong>.</p>
+
+      <h3>2. Какие данные мы собираем</h3>
+      <p>При заполнении формы заявки на сайте мы собираем следующие персональные данные:</p>
+      <ul>
+        <li>Имя</li>
+        <li>Номер телефона</li>
+        <li>Текст сообщения (по желанию)</li>
+      </ul>
+
+      <h3>3. Цели обработки данных</h3>
+      <p>Персональные данные используются исключительно для:</p>
+      <ul>
+        <li>Обратной связи с пользователем по его запросу</li>
+        <li>Консультации по продукции и оформления заказа</li>
+      </ul>
+
+      <h3>4. Хранение и защита данных</h3>
+      <p>Данные передаются через защищённое соединение (HTTPS) и не передаются третьим лицам. Данные хранятся только в мессенджере оператора и не записываются в базы данных.</p>
+
+      <h3>5. Права пользователя</h3>
+      <p>Вы вправе в любое время отозвать своё согласие на обработку персональных данных, направив запрос на email: <a href="mailto:uralkarkas.perm@yandex.ru" style="color:var(--gold)">uralkarkas.perm@yandex.ru</a></p>
+
+      <h3>6. Контакты оператора</h3>
+      <p>Самозанятый: Пинягина Любовь Сергеевна<br>
+      Email: <a href="mailto:uralkarkas.perm@yandex.ru" style="color:var(--gold)">uralkarkas.perm@yandex.ru</a><br>
+      Телефон: <a href="tel:+79194589910" style="color:var(--gold)">+7 (919) 458-99-10</a></p>
+    </div>
+  </div>
+
+  <!-- ================================================
+       COOKIE CONSENT — ВСПЛЫВАЮЩЕЕ ОКНО
+  ================================================ -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-text">
+      <span>Мы используем ваши данные только для обработки заявок. Нажимая «Принять», вы соглашаетесь с нашей </span>
+      <a href="#" onclick="openPrivacy(); return false;">политикой конфиденциальности</a>.
+    </div>
+    <div class="cookie-btns">
+      <button class="cookie-accept" onclick="acceptCookie()">Принять</button>
+      <button class="cookie-decline" onclick="declineCookie()">Отклонить</button>
+    </div>
+  </div>
+
+  <style>
+    /* Privacy Modal */
+    .privacy-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 10000;
+      backdrop-filter: blur(4px);
+    }
+    .privacy-modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10001;
+      background: var(--charcoal);
+      border: 0.5px solid var(--border);
+      border-radius: 8px;
+      width: 90%;
+      max-width: 680px;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+    }
+    .privacy-modal.open,
+    .privacy-overlay.open { display: block; }
+    .privacy-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: none;
+      border: none;
+      color: var(--stone);
+      font-size: 18px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .privacy-close:hover { color: var(--cream); }
+    .privacy-content h3 {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 1.5rem 0 0.5rem;
+    }
+    .privacy-content p,
+    .privacy-content li {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--stone);
+      margin-bottom: 0.5rem;
+    }
+    .privacy-content ul {
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .privacy-content strong { color: var(--cream); }
+
+    /* Cookie Banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 6rem;
+      left: 2rem;
+      z-index: 9998;
+      background: var(--charcoal);
+      border: 0.5px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .cookie-banner.hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+    }
+    .cookie-text {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--stone);
+    }
+    .cookie-text a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+    .cookie-btns {
+      display: flex;
+      gap: 10px;
+    }
+    .cookie-accept {
+      flex: 1;
+      background: var(--gold);
+      color: var(--obsidian);
+      border: none;
+      border-radius: 4px;
+      padding: 9px 16px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .cookie-accept:hover { background: var(--gold-light); }
+    .cookie-decline {
+      flex: 1;
+      background: none;
+      color: var(--stone);
+      border: 0.5px solid var(--border);
+      border-radius: 4px;
+      padding: 9px 16px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .cookie-decline:hover { color: var(--cream); border-color: var(--cream); }
+    @media (max-width: 480px) {
+      .cookie-banner { left: 1rem; right: 1rem; max-width: none; bottom: 5rem; }
+    }
+  </style>
+
+  <script>
+    // Privacy modal
+    function openPrivacy() {
+      document.getElementById('privacyModal').classList.add('open');
+      document.getElementById('privacyOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePrivacy() {
+      document.getElementById('privacyModal').classList.remove('open');
+      document.getElementById('privacyOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Cookie banner
+    function acceptCookie() {
+      localStorage.setItem('cookie_consent', 'accepted');
+      document.getElementById('cookieBanner').classList.add('hidden');
+    }
+    function declineCookie() {
+      localStorage.setItem('cookie_consent', 'declined');
+      document.getElementById('cookieBanner').classList.add('hidden');
+    }
+
+    // Показываем баннер если ещё не отвечали
+    window.addEventListener('load', function() {
+      if (!localStorage.getItem('cookie_consent')) {
+        setTimeout(function() {
+          document.getElementById('cookieBanner').style.display = 'flex';
+        }, 1500);
+      } else {
+        document.getElementById('cookieBanner').style.display = 'none';
+      }
+    });
+  </script>
+
+  <!-- Email popup -->
+  <div class="privacy-overlay" id="emailOverlay" onclick="closeEmail()"></div>
+  <div class="email-modal" id="emailModal">
+    <button class="privacy-close" onclick="closeEmail()">✕</button>
+    <div style="text-align:center;padding:1rem 0">
+      <div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">Написать нам</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(18px,4vw,26px);font-weight:300;color:#F0EAD6;margin-bottom:1.5rem;word-break:break-all">uralkarkas.perm@yandex.ru</div>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a href="mailto:uralkarkas.perm@yandex.ru" style="display:inline-flex;align-items:center;gap:8px;background:#C9A84C;color:#0D0D0B;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:11px 20px;border-radius:2px;text-decoration:none">Открыть почту</a>
+        <button onclick="copyEmail()" id="copyBtn" style="display:inline-flex;align-items:center;gap:8px;background:none;color:#F0EAD6;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:11px 20px;border-radius:2px;border:0.5px solid rgba(201,168,76,0.18);cursor:pointer">Скопировать</button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .email-modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10001;
+      background: #1C1C18;
+      border: 0.5px solid rgba(201,168,76,0.18);
+      border-radius: 8px;
+      width: 90%;
+      max-width: 480px;
+      padding: 2.5rem;
+    }
+    .email-modal.open { display: block; }
+  </style>
+
+  <script>
+    function showEmail() {
+      document.getElementById('emailModal').classList.add('open');
+      document.getElementById('emailOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeEmail() {
+      document.getElementById('emailModal').classList.remove('open');
+      document.getElementById('emailOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function copyEmail() {
+      navigator.clipboard.writeText('uralkarkas.perm@yandex.ru').then(function() {
+        var btn = document.getElementById('copyBtn');
+        btn.textContent = 'Скопировано ✓';
+        btn.style.color = '#C9A84C';
+        btn.style.borderColor = '#C9A84C';
+        setTimeout(function() {
+          btn.textContent = 'Скопировать';
+          btn.style.color = '#F0EAD6';
+          btn.style.borderColor = 'rgba(201,168,76,0.18)';
+        }, 2000);
+      });
+    }
   </script>
 </body>
 </html>
